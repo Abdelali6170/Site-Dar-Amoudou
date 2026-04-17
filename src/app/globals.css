@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  /* On définit nos couleurs pour qu'elles fonctionnent partout */
+  --color-dar-sand: #FDFBF7;
+  --color-dar-dark: #1A1A1A;
+  --color-dar-orange: #EA580C;
+  --color-dar-gold: #A3895D;
+
+  /* On définit nos polices */
+  --font-serif: var(--font-cormorant), serif;
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+/* On force le fond du site */
+:root {
+  background-color: #FDFBF7;
+  color: #1A1A1A;
+}
+
+/* Correction pour l'affichage des images en plein écran */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Animation fluide par défaut */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
