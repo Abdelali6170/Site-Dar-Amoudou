@@ -390,9 +390,9 @@ export default function Navbar({ categories }: NavbarProps) {
           </motion.div>
           <button onClick={() => setIsOpen(!isOpen)} className="relative z-[70] p-2 md:hidden" aria-label="Menu">
             <div className="flex flex-col justify-between w-7 h-5">
-              <motion.span animate={isOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }} className={`block h-0.5 w-full transition-colors duration-300 "bg-dar-dark"`} />
-              <motion.span animate={isOpen ? { opacity: 0 } : { opacity: 1 }} className={`block h-0.5 w-full transition-colors duration-300 "bg-dar-dark"`} />
-              <motion.span animate={isOpen ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }} className={`block h-0.5 w-full transition-colors duration-300 "bg-dar-dark"`} />
+              <motion.span animate={isOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }} className="block h-0.5 w-full bg-dar-dark" />
+              <motion.span animate={isOpen ? { opacity: 0 } : { opacity: 1 }} className="block h-0.5 w-full bg-dar-dark" />
+              <motion.span animate={isOpen ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }} className="block h-0.5 w-full bg-dar-dark" />
             </div>
           </button>
         </div>
@@ -404,10 +404,10 @@ export default function Navbar({ categories }: NavbarProps) {
           <motion.div
             initial={{ opacity: 0, x: "100%" }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[55] flex flex-col items-center justify-center md:hidden"
+            className="fixed inset-x-0 top-0 bottom-0 z-[55] flex flex-col md:hidden overflow-y-auto"
             style={{ backgroundColor: "#FDFBF7" }}
           >
-            <div className="flex flex-col items-center space-y-6 w-full px-8">
+            <div className="flex flex-col items-center space-y-6 w-full px-8 pt-28 pb-16">
 
               {/* Hébergement */}
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="w-full text-center">
@@ -437,7 +437,7 @@ export default function Navbar({ categories }: NavbarProps) {
                     <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.4 }} className="overflow-hidden">
                       <div className="mt-3 flex flex-col gap-2">
                         {EXPERIENCES_MENU.map((exp) => (
-                          <Link key={exp.tag} href={exp.lien} onClick={() => setIsOpen(false)} style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "1.75rem", color: "#A3895D", fontStyle: "italic" }}>{exp.icone} {exp.tag}</Link>
+                          <Link key={exp.tag} href={exp.lien} onClick={() => setIsOpen(false)} style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "1.75rem", color: "#A3895D", fontStyle: "italic" }}>{exp.tag}</Link>
                         ))}
                       </div>
                     </motion.div>
@@ -455,7 +455,7 @@ export default function Navbar({ categories }: NavbarProps) {
                     <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.4 }} className="overflow-hidden">
                       <div className="mt-3 flex flex-col gap-2">
                         {GALERIE_MENU.map((item) => (
-                          <Link key={item.categorie} href={item.lien} onClick={() => setIsOpen(false)} style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "1.75rem", color: "#A3895D", fontStyle: "italic" }}>{item.icone} {item.categorie}</Link>
+                          <Link key={item.categorie} href={item.lien} onClick={() => setIsOpen(false)} style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "1.75rem", color: "#A3895D", fontStyle: "italic" }}>{item.categorie}</Link>
                         ))}
                       </div>
                     </motion.div>

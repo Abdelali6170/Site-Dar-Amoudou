@@ -121,7 +121,7 @@ export default function Hero() {
           >
             <span
               className="absolute inset-0 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"
-              style={{ backgroundColor: "#FDFBF7" }}
+              style={{ backgroundColor: "#C44A0A" }}
             />
             <span
               className="relative text-xs tracking-[0.25em] uppercase transition-colors duration-500 group-hover:text-dar-dark"
@@ -136,7 +136,7 @@ export default function Hero() {
 
           <Link href="/contact" className="flex items-center gap-2 group">
             <span
-              className="text-xs tracking-[0.2em] uppercase transition-opacity duration-300 group-hover:opacity-60"
+              className="text-xs tracking-[0.2em] uppercase transition-opacity duration-300 group-hover:opacity-40"
               style={{ color: "rgba(253,251,247,0.75)", fontFamily: "var(--font-inter), sans-serif" }}
             >
               Réserver
