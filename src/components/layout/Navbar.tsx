@@ -473,13 +473,7 @@ export default function Navbar({ categories }: NavbarProps) {
               </motion.div>
             </div>
 
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="absolute bottom-12 text-center">
-              <p className="italic text-lg" style={{ fontFamily: "var(--font-cormorant), serif", color: "rgba(26,26,26,0.4)" }}>L'aventure vous attend</p>
-              <div className="mt-4 flex space-x-6 justify-center text-xs tracking-widest uppercase">
-                <a href="#" style={{ color: "rgba(26,26,26,0.4)" }}>Instagram</a>
-                <a href="#" style={{ color: "rgba(26,26,26,0.4)" }}>Facebook</a>
-              </div>
-            </motion.div>
+
           </motion.div>
         )}
       </AnimatePresence>
